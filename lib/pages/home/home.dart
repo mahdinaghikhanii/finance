@@ -296,10 +296,8 @@ class _HomePageState extends State<HomePage>
             Row(
               children: [
                 const CircleAvatar(
-                  radius: 26,
-                  backgroundImage: NetworkImage(
-                      'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80'),
-                ),
+                    radius: 26,
+                    backgroundImage: AssetImage('assets/mahdi.jpg')),
                 const SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -337,8 +335,9 @@ class _HomePageState extends State<HomePage>
             const SizedBox(height: 12),
             TabBar(
               isScrollable: true,
-              indicatorPadding: const EdgeInsets.only(top: 4, bottom: 4),
+              indicatorPadding: const EdgeInsets.only(top: 4, bottom: 5),
               controller: _tabController,
+              padding: EdgeInsets.only(bottom: 10),
               indicatorColor: Colors.white,
               labelColor: Colors.black,
               unselectedLabelColor: Colors.white,
@@ -351,17 +350,29 @@ class _HomePageState extends State<HomePage>
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24))),
               tabs: const [
-                Tab(
-                  text: 'Dashboard',
+                Padding(
+                  padding: EdgeInsets.only(left: 5, right: 5),
+                  child: Tab(
+                    text: 'Dashboard',
+                  ),
                 ),
-                Tab(
-                  text: 'Cards',
+                Padding(
+                  padding: EdgeInsets.only(left: 5, right: 5),
+                  child: Tab(
+                    text: 'Cards',
+                  ),
                 ),
-                Tab(
-                  text: 'Analytics',
+                Padding(
+                  padding: EdgeInsets.only(left: 5, right: 5),
+                  child: Tab(
+                    text: 'Analytics',
+                  ),
                 ),
-                Tab(
-                  text: 'Recurring',
+                Padding(
+                  padding: EdgeInsets.only(left: 5, right: 5),
+                  child: Tab(
+                    text: 'Recurring',
+                  ),
                 )
               ],
             ),
